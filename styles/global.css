@@ -1,0 +1,164 @@
+/* Roboto font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* Variables CSS */
+:root {
+    --primary-color: #3498db;
+    --primary-color-hover: #2980b9;
+    --primary-color-active: #1c5980;
+    --secondary-color: #2ecc71;
+    --secondary-color-hover: #27ae60;
+    --secondary-color-active: #1e8449;
+    --background-color: #f5f5f5;
+    --primary-font-color: #333333;
+    --secondary-font-color: #666666;
+    --border-color: #dddddd;
+    --error-color: #e74c3c;
+    --warning-color: #f39c12;
+    --success-color: #27ae60;
+}
+
+/* General */
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-font-color);
+}
+
+/* Headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+p,
+a,
+li,
+input,
+textarea,
+button {
+    font-weight: 400;
+}
+
+.btn-primary,
+.btn-secondary {
+    font-weight: 500;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-hover);
+    border-color: var(--primary-color-hover);
+}
+
+.btn-primary:active {
+    background-color: var(--primary-color-active);
+    border-color: var(--primary-color-active);
+}
+
+.btn-primary:disabled {
+    background-color: #bdc3c7;
+    border-color: #bdc3c7;
+    color: #7f8c8d;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color-hover);
+    border-color: var(--secondary-color-hover);
+}
+
+.btn-secondary:active {
+    background-color: var(--secondary-color-active);
+    border-color: var(--secondary-color-active);
+}
+
+.btn-secondary:disabled {
+    background-color: #bdc3c7;
+    border-color: #bdc3c7;
+    color: #7f8c8d;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: darken(var(--primary-color), 10%);
+}
+
+a:active {
+    color: darken(var(--primary-color), 20%);
+}
+
+/* Forms */
+input,
+textarea {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    color: var(--primary-font-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--secondary-font-color);
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.is-invalid {
+    border-color: var(--error-color);
+    color: var(--error-color);
+    background-color: lighten(var(--error-color), 50%);
+}
+
+.is-valid {
+    border-color: var(--success-color);
+    color: var(--success-color);
+    background-color: lighten(var(--success-color), 50%);
+}
+
+/* Cards */
+.card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: var(--primary-font-color);
+}
+
+.card-text {
+    color: var(--secondary-font-color);
+}
+
+/* Header and Footer */
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+footer {
+    background-color: var(--primary-font-color);
+    color: var(--background-color);
+}
