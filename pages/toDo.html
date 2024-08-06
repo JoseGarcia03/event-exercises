@@ -26,47 +26,41 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link" href="../index.html">Índice de masa corporal</a>
-                    <a class="nav-link active" aria-current="page" href="#">Conversor de divisas</a>
-                    <a class="nav-link" href="./toDo.html">To Do List</a>
+                    <a class="nav-link" href="./divisas.html">Conversor de divisas</a>
+                    <a class="nav-link active" aria-current="page" href="#">To Do List</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="container-fluid" style="max-width: 400px;">
-        <h1 class="mt-3 mx-auto border-bottom border-primary" style="width: fit-content;">Conversor de divisas</h1>
+    <main class="container-fluid">
 
-        <form id="form" class="container-fluid mx-auto mt-5 needs-validation" novalidate>
-            <div class="mb-3">
-                <label for="amount" class="form-label">Importe:</label>
-                <input type="number" class="form-control" id="amount" required>
+        <form id="form" class="card new-note-card p-4 mt-5 mx-auto needs-validation mb-3" style="max-width: 550px;"
+            novalidate>
+            <h1 class="card-title fs-2">Nueva nota</h1>
+            <div class="form-group mb-3">
+                <input id="title" type="text" class="form-control" placeholder="Título" required>
             </div>
-            <div class="mb-3">
-                <label for="from" class="form-label">De:</label>
-                <select class="form-select" id="from" required>
-                    <option selected value="">Divisa</option>
-                    <option value="USD">USD</option>
-                    <option value="COP">COP</option>
-                    <option value="ARS">ARS</option>
-                </select>
-                <div class="invalid-feedback">Por favor seleccione una divisa válida.</div>
+            <div class="form-group mb-3">
+                <textarea id="text" class="form-control" rows="4" placeholder="Escriba su nota aquí!"
+                    required></textarea>
             </div>
-            <div class="mb-3">
-                <label for="to" class="form-label">A:</label>
-                <select class="form-select" id="to" required>
-                    <option selected value="">Divisa</option>
-                    <option value="USD">USD</option>
-                    <option value="COP">COP</option>
-                    <option value="ARS">ARS</option>
-                </select>
-                <div class="invalid-feedback">Por favor seleccione una divisa válida.</div>
-            </div>
-            <div>
-                <button type="submit" class="btn btn-primary">Convertir</button>
+            <div class="button-group">
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <button type="button" class="btn btn-danger" onclick="clearForm()">Limpiar</button>
             </div>
         </form>
 
-        <section id="show-result" class="container-fluid">
+        <div class="mb-4 mx-auto" style="max-width: 550px;">
+            <input type="text" id="search" class="form-control" placeholder="Buscar por texto" oninput="applyFilter()">
+            <div class="form-check mt-2">
+                <input type="checkbox" id="isChecked" class="form-check-input" onclick="applyFilter()">
+                <label for="filtroRealizadas" class="form-check-label">Mostrar solo realizadas</label>
+            </div>
+        </div>
+
+
+        <section id="show-notes" class="container-fluid d-flex gap-3 mt-5 justify-content-center flex-wrap">
         </section>
 
     </main>
@@ -80,7 +74,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <script src="../scripts/divisas.js"></script>
+    <script src="../scripts/toDo.js"></script>
 </body>
 
 </html>
